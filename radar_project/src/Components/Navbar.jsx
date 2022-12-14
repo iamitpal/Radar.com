@@ -86,7 +86,7 @@ export default function Navbar() {
           direction={"row"}
           spacing={6}
         >
-          <Button
+          {/* <Button
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
@@ -95,20 +95,23 @@ export default function Navbar() {
             mr={10}
           >
             Sign In
-          </Button>
+          </Button> */}
+          {/* <Link to="/login"> */}
           <Button
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"#5c62d6"}
+            bg="#ff1616"
             href={"#"}
+            mr={10}
             _hover={{
               bg: "pink.300",
             }}
           >
-            Sign Up
+            Start free or get a demo
           </Button>
+          {/* </Link> */}
         </Stack>
       </Flex>
 
