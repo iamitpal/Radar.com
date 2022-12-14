@@ -294,7 +294,7 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: "New & Noteworthy",
         subLabel: "Up-and-coming Designers",
-        href: "#",
+        href: "./Home",
       },
     ],
   },
