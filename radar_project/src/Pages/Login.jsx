@@ -5,14 +5,16 @@ import {
   FormLabel,
   Input,
   Checkbox,
+  Center,
   Stack,
   Link,
   Button,
   Heading,
+  Image,
   Text,
   useColorModeValue,
-  Image,
 } from "@chakra-ui/react";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Login() {
   return (
@@ -25,17 +27,11 @@ export default function Login() {
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
         <Stack align={"center"}>
           <Image
-            boxSize="auto"
-            objectFit="cover"
-            width="10rem"
-            // height="auto"
-            src="https://i.postimg.cc/c4XpqHHT/Radar-3.png"
+            width={"15rem"}
+            src="https://i.ibb.co/mBb56Pm/Radar-5.png"
             alt="Radar"
           />
           <Heading fontSize={"4xl"}>Sign in to your account</Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy all of our cool <Link color={"blue.400"}>features</Link> ✌️
-          </Text>
         </Stack>
         <Box
           rounded={"lg"}
@@ -68,11 +64,16 @@ export default function Login() {
                   bg: "blue.500",
                 }}
               >
-                Log in
+                Sign in
               </Button>
             </Stack>
           </Stack>
         </Box>
+        <Button w={"full"} variant={"outline"} leftIcon={<FcGoogle />}>
+          <Center>
+            <Text>Sign in with Google</Text>
+          </Center>
+        </Button>
       </Stack>
     </Flex>
   );

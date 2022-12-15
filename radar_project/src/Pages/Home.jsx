@@ -1,108 +1,147 @@
+import React from "react";
 import {
-  Container,
-  SimpleGrid,
-  Image,
-  Flex,
+  Box,
   Heading,
+  Link,
+  Image,
   Text,
-  Stack,
-  StackDivider,
-  Icon,
+  Divider,
+  HStack,
+  Tag,
+  Wrap,
+  WrapItem,
+  SpaceProps,
   useColorModeValue,
+  Container,
+  VStack,
 } from "@chakra-ui/react";
-import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
-  IoSearchSharp,
-} from "react-icons/io5";
-import { ReactElement } from "react";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
-interface FeatureProps {
-  text: string;
-  iconBg: string;
-  icon?: ReactElement;
+interface IBlogTags {
+  tags: Array<string>;
+  marginTop?: SpaceProps["marginTop"];
 }
 
-const Feature = ({ text, icon, iconBg }) => {
+const BlogTags: React.FC<IBlogTags> = (props) => {
   return (
-    <Stack direction={"row"} align={"center"}>
-      <Flex
-        w={8}
-        h={8}
-        align={"center"}
-        justify={"center"}
-        rounded={"full"}
-        bg={iconBg}
-      >
-        {icon}
-      </Flex>
-      <Text fontWeight={600}>{text}</Text>
-    </Stack>
+    <HStack spacing={2} marginTop={props.marginTop}>
+      {props.tags.map((tag) => {
+        return (
+          <Tag size={"md"} variant="solid" colorScheme="orange" key={tag}>
+            {tag}
+          </Tag>
+        );
+      })}
+    </HStack>
   );
 };
 
-export default function Home() {
+interface BlogAuthorProps {
+  date: Date;
+  name: string;
+}
+
+export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
   return (
-    <Container maxW={"5xl"} py={12}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={4}>
-          <Text
-            textTransform={"uppercase"}
-            color={"blue.400"}
-            fontWeight={600}
-            fontSize={"sm"}
-            bg={useColorModeValue("blue.50", "blue.900")}
-            p={2}
-            alignSelf={"flex-start"}
-            rounded={"md"}
+    <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
+      <Image
+        borderRadius="full"
+        boxSize="40px"
+        src="https://100k-faces.glitch.me/random-image"
+        alt={`Avatar of ${props.name}`}
+      />
+      <Text fontWeight="medium">{props.name}</Text>
+      <Text>—</Text>
+      <Text>{props.date.toLocaleDateString()}</Text>
+    </HStack>
+  );
+};
+
+const ArticleList = () => {
+  return (
+    <Container maxW={"7xl"} p="12">
+      <Heading fontFamily={"TimesNewRoman"} fontWeight={700} as="h1">
+        RADAR CRM PLATFORM
+      </Heading>
+      <Box
+        marginTop={{ base: "1", sm: "5" }}
+        display="flex"
+        flexDirection={{ base: "column", sm: "row" }}
+        justifyContent="space-between"
+      >
+        <Box
+          display="flex"
+          flex="1"
+          marginRight="3"
+          position="relative"
+          alignItems="center"
+        >
+          <Box
+            width={{ base: "100%", sm: "85%" }}
+            zIndex="2"
+            marginLeft={{ base: "0", sm: "5%" }}
+            marginTop="5%"
           >
-            Our Story
-          </Text>
-          <Heading>A digital Product design agency</Heading>
-          <Text color={"gray.500"} fontSize={"lg"}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
-          </Text>
-          <Stack
-            spacing={4}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue("gray.100", "gray.700")}
+            <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+              <Image
+                borderRadius="lg"
+                src={
+                  "https://www.hubspot.com/hubfs/SUI-Homepage-Header-Desktop@2x.png"
+                }
+                alt="some good alt text"
+                objectFit="contain"
               />
-            }
+            </Link>
+          </Box>
+          <Box zIndex="1" width="100%" position="absolute" height="100%">
+            <Box
+              bgGradient={useColorModeValue(
+                "radial(orange.600 1px, transparent 1px)",
+                "radial(orange.300 1px, transparent 1px)"
+              )}
+              backgroundSize="20px 20px"
+              opacity="0.4"
+              height="100%"
+            />
+          </Box>
+        </Box>
+        <Box
+          display="flex"
+          flex="1"
+          flexDirection="column"
+          justifyContent="center"
+          marginTop={{ base: "3", sm: "0" }}
+        >
+          <BlogTags tags={["CRM", "RADAR"]} />
+          <Heading marginTop="1">
+            <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+              Powerful, not overpowering
+            </Link>
+          </Heading>
+          <Text
+            as="p"
+            marginTop="2"
+            color={useColorModeValue("gray.700", "gray.200")}
+            fontSize="lg"
           >
-            <Feature
-              icon={
-                <Icon as={IoAnalyticsSharp} color={"yellow.500"} w={5} h={5} />
-              }
-              iconBg={useColorModeValue("yellow.100", "yellow.900")}
-              text={"Business Planning"}
-            />
-            <Feature
-              icon={<Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />}
-              iconBg={useColorModeValue("green.100", "green.900")}
-              text={"Financial Planning"}
-            />
-            <Feature
-              icon={
-                <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
-              }
-              iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"Market Analysis"}
-            />
-          </Stack>
-        </Stack>
-        <Flex>
-          <Image
-            rounded={"md"}
-            alt={"feature image"}
-            src={
-              "https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-            }
-            objectFit={"cover"}
-          />
-        </Flex>
-      </SimpleGrid>
+            Finally, a CRM platform that’s both powerful and easy to use. Create
+            delightful customer experiences. Have a delightful time doing it.
+          </Text>
+          {/* <BlogAuthor name="John Doe" date={new Date("2021-04-06T19:01:27Z")} /> */}
+          <Box>{<br></br>} </Box>
+          <Button colorScheme="orange">Start free or get a Demo</Button>
+          <Text
+            as="p"
+            marginTop="2"
+            color={useColorModeValue("gray.700", "gray.200")}
+            fontSize="lg"
+          >
+            Get started with free tools, or get more with our premium software.
+          </Text>
+        </Box>
+      </Box>
     </Container>
   );
-}
+};
+
+export default ArticleList;
