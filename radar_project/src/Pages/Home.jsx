@@ -22,8 +22,18 @@ import {
   ListIcon,
   ButtonGroup,
   SimpleGrid,
+  Flex,
+  useBreakpointValue,
+  chakra,
+  Stat,
+  StatLabel,
+  StatNumber,
+  Grid,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
+import { FaHandshake } from "react-icons/fa";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { GiEarthAmerica } from "react-icons/gi";
 
 interface IBlogTags {
   tags: Array<string>;
@@ -182,59 +192,39 @@ const ArticleList = () => {
               <Text
                 fontSize={"sm"}
                 fontWeight={500}
-                bg={useColorModeValue("green.50", "green.900")}
+                bg={useColorModeValue("orange.50", "orange.900")}
                 p={2}
                 px={3}
-                color={"green.500"}
+                color={"orange.500"}
                 rounded={"full"}
               >
                 Marketing Hub
               </Text>
-              <Stack direction={"row"} align={"center"} justify={"center"}>
-                <Text fontSize={"3xl"}>$</Text>
-                <Text fontSize={"6xl"} fontWeight={800}>
-                  79
-                </Text>
-                <Text color={"gray.500"}>/month</Text>
-              </Stack>
+              <Box>{<br></br>} </Box>
+
+              <Text color={"gray.600"} fontSize={"m"}>
+                Marketing software to help you grow traffic, convert more
+                visitors, and run complete inbound marketing campaigns at scale.
+              </Text>
             </Stack>
 
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  5.000 page views
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Lead generation
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 automation executions
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Marketing automation
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 identified users
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  All features
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Analytics
                 </ListItem>
               </List>
-
-              <Button
-                mt={10}
-                w={"full"}
-                bg={"green.400"}
-                color={"white"}
-                rounded={"xl"}
-                boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-                _hover={{
-                  bg: "green.500",
-                }}
-                _focus={{
-                  bg: "green.500",
-                }}
-              >
-                Start your trial
-              </Button>
+              <Box>{<br></br>} </Box>
+              <Button colorScheme="orange">Get started</Button>
             </Box>
           </Box>
         </Center>
@@ -256,59 +246,40 @@ const ArticleList = () => {
               <Text
                 fontSize={"sm"}
                 fontWeight={500}
-                bg={useColorModeValue("green.50", "green.900")}
+                bg={useColorModeValue("orange.50", "orange.900")}
                 p={2}
                 px={3}
-                color={"green.500"}
+                color={"orange.500"}
                 rounded={"full"}
               >
-                Marketing Hub
+                Sales Hub
               </Text>
-              <Stack direction={"row"} align={"center"} justify={"center"}>
-                <Text fontSize={"3xl"}>$</Text>
-                <Text fontSize={"6xl"} fontWeight={800}>
-                  79
-                </Text>
-                <Text color={"gray.500"}>/month</Text>
-              </Stack>
+              <Box>{<br></br>} </Box>
+
+              <Text color={"gray.600"} fontSize={"m"}>
+                Sales CRM software to help you get deeper insights into
+                prospects, automate the tasks you hate, and close more deals
+                faster.
+              </Text>
             </Stack>
 
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  5.000 page views
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Advanced CRM
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 automation executions
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Meeting scheduling
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 identified users
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  All features
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Payments
                 </ListItem>
               </List>
-
-              <Button
-                mt={10}
-                w={"full"}
-                bg={"green.400"}
-                color={"white"}
-                rounded={"xl"}
-                boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-                _hover={{
-                  bg: "green.500",
-                }}
-                _focus={{
-                  bg: "green.500",
-                }}
-              >
-                Start your trial
-              </Button>
+              <Box>{<br></br>} </Box>
+              <Button colorScheme="orange">Get started</Button>
             </Box>
           </Box>
         </Center>
@@ -330,59 +301,40 @@ const ArticleList = () => {
               <Text
                 fontSize={"sm"}
                 fontWeight={500}
-                bg={useColorModeValue("green.50", "green.900")}
+                bg={useColorModeValue("orange.50", "orange.900")}
                 p={2}
                 px={3}
-                color={"green.500"}
+                color={"orange.500"}
                 rounded={"full"}
               >
-                Marketing Hub
+                Service Hub
               </Text>
-              <Stack direction={"row"} align={"center"} justify={"center"}>
-                <Text fontSize={"3xl"}>$</Text>
-                <Text fontSize={"6xl"} fontWeight={800}>
-                  79
-                </Text>
-                <Text color={"gray.500"}>/month</Text>
-              </Stack>
+              <Box>{<br></br>} </Box>
+
+              <Text color={"gray.600"} fontSize={"m"}>
+                Customer service software to help you connect with customers,
+                exceed expectations, and turn them into promoters who grow your
+                business.
+              </Text>
             </Stack>
 
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  5.000 page views
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Tickets
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 automation executions
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Customer feedback
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 identified users
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  All features
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Knowledge base
                 </ListItem>
               </List>
-
-              <Button
-                mt={10}
-                w={"full"}
-                bg={"green.400"}
-                color={"white"}
-                rounded={"xl"}
-                boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-                _hover={{
-                  bg: "green.500",
-                }}
-                _focus={{
-                  bg: "green.500",
-                }}
-              >
-                Start your trial
-              </Button>
+              <Box>{<br></br>} </Box>
+              <Button colorScheme="orange">Get started</Button>
             </Box>
           </Box>
         </Center>
@@ -404,59 +356,40 @@ const ArticleList = () => {
               <Text
                 fontSize={"sm"}
                 fontWeight={500}
-                bg={useColorModeValue("green.50", "green.900")}
+                bg={useColorModeValue("orange.50", "orange.900")}
                 p={2}
                 px={3}
-                color={"green.500"}
+                color={"orange.500"}
                 rounded={"full"}
               >
-                Marketing Hub
+                CMS Hub
               </Text>
-              <Stack direction={"row"} align={"center"} justify={"center"}>
-                <Text fontSize={"3xl"}>$</Text>
-                <Text fontSize={"6xl"} fontWeight={800}>
-                  79
-                </Text>
-                <Text color={"gray.500"}>/month</Text>
-              </Stack>
+              <Box>{<br></br>} </Box>
+
+              <Text color={"gray.600"} fontSize={"m"}>
+                Content management software that’s flexible for marketers,
+                powerful for developers, and gives customers a personalized,
+                secure experience.
+              </Text>
             </Stack>
 
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  5.000 page views
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Drag-and-drop editor
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 automation executions
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  SEO recommendations
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 identified users
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  All features
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Website themes
                 </ListItem>
               </List>
-
-              <Button
-                mt={10}
-                w={"full"}
-                bg={"green.400"}
-                color={"white"}
-                rounded={"xl"}
-                boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-                _hover={{
-                  bg: "green.500",
-                }}
-                _focus={{
-                  bg: "green.500",
-                }}
-              >
-                Start your trial
-              </Button>
+              <Box>{<br></br>} </Box>
+              <Button colorScheme="orange">Get started</Button>
             </Box>
           </Box>
         </Center>
@@ -478,63 +411,190 @@ const ArticleList = () => {
               <Text
                 fontSize={"sm"}
                 fontWeight={500}
-                bg={useColorModeValue("green.50", "green.900")}
+                bg={useColorModeValue("orange.50", "orange.900")}
                 p={2}
                 px={3}
-                color={"green.500"}
+                color={"orange.500"}
                 rounded={"full"}
               >
-                Marketing Hub
+                Operations Hub
               </Text>
-              <Stack direction={"row"} align={"center"} justify={"center"}>
-                <Text fontSize={"3xl"}>$</Text>
-                <Text fontSize={"6xl"} fontWeight={800}>
-                  79
-                </Text>
-                <Text color={"gray.500"}>/month</Text>
-              </Stack>
+              <Box>{<br></br>} </Box>
+
+              <Text color={"gray.600"} fontSize={"m"}>
+                Operations software that syncs your apps, cleans and curates
+                customer data, and automates processes — so all your systems and
+                teams work better together.
+              </Text>
             </Stack>
 
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  5.000 page views
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Data sync
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 automation executions
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Programmable automation
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  50 identified users
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={CheckIcon} color="green.400" />
-                  All features
+                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  Data quality automation
                 </ListItem>
               </List>
-
-              <Button
-                mt={10}
-                w={"full"}
-                bg={"green.400"}
-                color={"white"}
-                rounded={"xl"}
-                boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-                _hover={{
-                  bg: "green.500",
-                }}
-                _focus={{
-                  bg: "green.500",
-                }}
-              >
-                Start your trial
-              </Button>
+              <Box>{<br></br>} </Box>
+              <Button colorScheme="orange">Get started</Button>
             </Box>
           </Box>
         </Center>
       </SimpleGrid>
+      <Flex
+        w={"full"}
+        h={"100vh"}
+        backgroundImage={
+          "url(https://images.pexels.com/photos/6985001/pexels-photo-6985001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)"
+        }
+        backgroundSize={"cover"}
+        backgroundPosition={"center center"}
+      >
+        <VStack
+          w={"full"}
+          justify={"center"}
+          px={useBreakpointValue({ base: 4, md: 8 })}
+          bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+        >
+          <Stack
+            as={Box}
+            textAlign={"center"}
+            spacing={{ base: 8, md: 14 }}
+            py={{ base: 20, md: 36 }}
+          >
+            <Text
+              color={"white"}
+              fontWeight={800}
+              lineHeight={1.2}
+              fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+            >
+              Learn and grow with award-winning support and a thriving community
+              behind you.
+            </Text>
+            <Text
+              fontSize={useBreakpointValue({ base: "xl", md: "xl" })}
+              color={"white"}
+            >
+              Monetize your content by charging your most loyal readers and
+              reward them loyalty points. Give back to your loyal readers by
+              granting them access to your pre-releases and sneak-peaks.
+            </Text>
+            <Box maxW="7xl" mx={"auto"} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+              <chakra.h1
+                color={"white"}
+                textAlign={"center"}
+                fontSize={"4xl"}
+                py={10}
+                fontWeight={"bold"}
+              >
+                Radar.com Achievements
+              </chakra.h1>
+              <SimpleGrid
+                columns={{ base: 1, md: 3 }}
+                spacing={{ base: 5, lg: 8 }}
+                color={"white"}
+              >
+                <Grid
+                  justify={"center"}
+                  textAlign={"center"}
+                  px={{ base: 4, md: 8 }}
+                  py={"5"}
+                  shadow={"xl"}
+                  border={"1px solid"}
+                  borderColor={useColorModeValue("white", "white")}
+                  rounded={"lg"}
+                >
+                  {" "}
+                  <FaHandshake size={40} />
+                  <Text
+                    color={"white"}
+                    fontWeight={700}
+                    lineHeight={1.2}
+                    fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+                    textAlign={"left"}
+                  >
+                    100+
+                  </Text>
+                  <Heading
+                    textTransform={"uppercase"}
+                    fontSize={"2xl"}
+                    color={useColorModeValue("white", "white")}
+                  >
+                    Radar user groups
+                  </Heading>
+                </Grid>
+                <Grid
+                  justify={"center"}
+                  textAlign={"center"}
+                  px={{ base: 4, md: 8 }}
+                  py={"5"}
+                  shadow={"xl"}
+                  border={"1px solid"}
+                  borderColor={useColorModeValue("white", "white")}
+                  rounded={"lg"}
+                >
+                  {" "}
+                  <RiCustomerService2Fill size={40} />
+                  <Text
+                    color={"white"}
+                    fontWeight={700}
+                    lineHeight={1.2}
+                    fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+                    textAlign={"left"}
+                  >
+                    158,000+
+                  </Text>
+                  <Heading
+                    textTransform={"uppercase"}
+                    fontSize={"2xl"}
+                    color={useColorModeValue("white", "white")}
+                  >
+                    Customers
+                  </Heading>
+                </Grid>
+                <Grid
+                  justify={"center"}
+                  textAlign={"center"}
+                  px={{ base: 4, md: 8 }}
+                  py={"5"}
+                  shadow={"xl"}
+                  border={"1px solid"}
+                  borderColor={useColorModeValue("white", "white")}
+                  rounded={"lg"}
+                >
+                  {" "}
+                  <GiEarthAmerica size={40} />
+                  <Text
+                    color={"white"}
+                    fontWeight={700}
+                    lineHeight={1.2}
+                    fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+                    textAlign={"left"}
+                    ml={8}
+                  >
+                    6+
+                  </Text>
+                  <Heading
+                    textTransform={"uppercase"}
+                    fontSize={"2xl"}
+                    color={useColorModeValue("white", "white")}
+                  >
+                    Languages
+                  </Heading>
+                </Grid>
+              </SimpleGrid>
+            </Box>
+          </Stack>
+        </VStack>
+      </Flex>
     </Container>
   );
 };
