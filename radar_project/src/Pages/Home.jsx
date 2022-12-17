@@ -27,11 +27,18 @@ import { CheckIcon } from "@chakra-ui/icons";
 import { FaHandshake } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { GiEarthAmerica } from "react-icons/gi";
+import { Navigate } from "react-router-dom";
+import MarketingHub from "./MarketingHub";
 
 interface IBlogTags {
   tags: Array<string>;
   marginTop?: SpaceProps["marginTop"];
 }
+
+const markbtn = ({ children }) => {
+  console.log("clicked");
+  return <Navigate to="/marketing" element={<MarketingHub />}></Navigate>;
+};
 
 const BlogTags: React.FC<IBlogTags> = (props) => {
   return (
@@ -65,6 +72,26 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
       <Text>—</Text>
       <Text>{props.date.toLocaleDateString()}</Text>
     </HStack>
+  );
+};
+
+const Logo = (props: any) => {
+  return (
+    <Box>
+      <Image
+        width={"6rem"}
+        src="https://i.ibb.co/drB1T5y/Radar-2.png"
+        alt="Logo"
+      />
+    </Box>
+  );
+};
+
+const ListHeader = ({ children }) => {
+  return (
+    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
+      {children}
+    </Text>
   );
 };
 
@@ -217,7 +244,11 @@ const ArticleList = () => {
                 </ListItem>
               </List>
               <Box>{<br></br>} </Box>
-              <Button colorScheme="orange">Get started</Button>
+              {/* <Navigate to="/marketing"> */}
+              <Button onClick={markbtn} colorScheme="orange">
+                Get started
+              </Button>
+              {/* </Navigate> */}
             </Box>
           </Box>
         </Center>
@@ -436,7 +467,7 @@ const ArticleList = () => {
                   Data quality automation
                 </ListItem>
               </List>
-              <Box>{<br></br>} </Box>
+              <Box>{<br></br>}</Box>
               <Button colorScheme="orange">Get started</Button>
             </Box>
           </Box>
@@ -588,6 +619,145 @@ const ArticleList = () => {
           </Stack>
         </VStack>
       </Flex>
+      <Box>{<br></br>}</Box>
+      <Box>{<br></br>}</Box>
+      <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
+        <Flex p={8} flex={1} align={"center"} justify={"center"}>
+          <Stack spacing={6} w={"full"} maxW={"lg"}>
+            <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+              <Text
+                as={"span"}
+                position={"relative"}
+                _after={{
+                  content: "''",
+                  width: "full",
+                  height: useBreakpointValue({ base: "20%", md: "30%" }),
+                  position: "absolute",
+                  bottom: 1,
+                  left: 0,
+                  bg: "#ffbc4b",
+                  zIndex: -1,
+                }}
+              >
+                Radar.Com
+              </Text>
+              <br />{" "}
+              <Text color={"#ffbc4b"} as={"span"}>
+                Start Growing With Radar Today
+              </Text>{" "}
+            </Heading>
+            <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+              With tools to make every part of your process more human and a
+              support team excited to help you, getting started with inbound has
+              never been easier.
+            </Text>
+            <Stack direction={{ base: "column", md: "row" }} spacing={4}>
+              <Button
+                rounded={"full"}
+                bg={"#ffbc4b"}
+                color={"white"}
+                _hover={{
+                  bg: "#ffbc4b",
+                }}
+              >
+                Get a Demo
+              </Button>
+              <Button rounded={"full"}>Get Sarted Free</Button>
+            </Stack>
+          </Stack>
+        </Flex>
+        <Flex flex={1}>
+          <Image
+            width={"80rem"}
+            alt={"Login Image"}
+            objectFit={"cover"}
+            src={
+              "https://www.hubspot.com/hubfs/CSOL/module-assets/_cta_contentblock_headshots_headshot_6.png"
+            }
+          />
+        </Flex>
+      </Stack>
+      <Box>
+        <br></br>
+      </Box>
+      <Box>
+        <br></br>
+      </Box>
+      <Box
+        bg={useColorModeValue("gray.50", "gray.900")}
+        color={useColorModeValue("gray.700", "gray.200")}
+      >
+        <Container as={Stack} maxW={"6xl"} py={10}>
+          <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+            <Stack align={"flex-start"}>
+              <ListHeader>Product</ListHeader>
+              <Link href={"#"}>Overview</Link>
+              <Stack direction={"row"} align={"center"} spacing={2}>
+                <Link href={"#"}>Features</Link>
+                <Tag
+                  size={"sm"}
+                  bg={useColorModeValue("green.300", "green.800")}
+                  ml={2}
+                  color={"white"}
+                >
+                  New
+                </Tag>
+              </Stack>
+              <Link href={"#"}>Tutorials</Link>
+              <Link href={"#"}>Pricing</Link>
+              <Link href={"#"}>Releases</Link>
+            </Stack>
+            <Stack align={"flex-start"}>
+              <ListHeader>Company</ListHeader>
+              <Link href={"#"}>About Us</Link>
+              <Link href={"#"}>Press</Link>
+              <Link href={"#"}>Careers</Link>
+              <Link href={"#"}>Contact Us</Link>
+              <Link href={"#"}>Partners</Link>
+            </Stack>
+            <Stack align={"flex-start"}>
+              <ListHeader>Legal</ListHeader>
+              <Link href={"#"}>Cookies Policy</Link>
+              <Link href={"#"}>Privacy Policy</Link>
+              <Link href={"#"}>Terms of Service</Link>
+              <Link href={"#"}>Law Enforcement</Link>
+              <Link href={"#"}>Status</Link>
+            </Stack>
+            <Stack align={"flex-start"}>
+              <ListHeader>Follow Us</ListHeader>
+              <Link href={"#"}>Facebook</Link>
+              <Link href={"#"}>Twitter</Link>
+              <Link href={"#"}>Dribbble</Link>
+              <Link href={"#"}>Instagram</Link>
+              <Link href={"#"}>LinkedIn</Link>
+            </Stack>
+          </SimpleGrid>
+        </Container>
+        <Box py={10}>
+          <Flex
+            align={"center"}
+            _before={{
+              content: '""',
+              borderBottom: "1px solid",
+              borderColor: useColorModeValue("gray.200", "gray.700"),
+              flexGrow: 1,
+              mr: 8,
+            }}
+            _after={{
+              content: '""',
+              borderBottom: "1px solid",
+              borderColor: useColorModeValue("gray.200", "gray.700"),
+              flexGrow: 1,
+              ml: 8,
+            }}
+          >
+            <Logo />
+          </Flex>
+          <Text pt={6} fontSize={"sm"} textAlign={"center"}>
+            © 2022 Chakra Templates. All rights reserved
+          </Text>
+        </Box>
+      </Box>
     </Container>
   );
 };
