@@ -1,4 +1,5 @@
-import React from "react";
+import React, { ReactNode } from "react";
+
 import {
   Box,
   Heading,
@@ -231,15 +232,15 @@ const ArticleList = () => {
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Lead generation
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Marketing automation
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Analytics
                 </ListItem>
               </List>
@@ -290,15 +291,15 @@ const ArticleList = () => {
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Advanced CRM
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Meeting scheduling
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Payments
                 </ListItem>
               </List>
@@ -345,15 +346,15 @@ const ArticleList = () => {
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Tickets
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Customer feedback
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Knowledge base
                 </ListItem>
               </List>
@@ -400,15 +401,15 @@ const ArticleList = () => {
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Drag-and-drop editor
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   SEO recommendations
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Website themes
                 </ListItem>
               </List>
@@ -455,15 +456,15 @@ const ArticleList = () => {
             <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
               <List spacing={3}>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Data sync
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Programmable automation
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={CheckIcon} color="#dd6b20" />
+                  <ListIcon as={CheckIcon} color="#ffbc4b" />
                   Data quality automation
                 </ListItem>
               </List>
@@ -754,7 +755,7 @@ const ArticleList = () => {
             <Logo />
           </Flex>
           <Text pt={6} fontSize={"sm"} textAlign={"center"}>
-            © 2022 Chakra Templates. All rights reserved
+            © 2022 Radar. All rights reserved
           </Text>
         </Box>
       </Box>
