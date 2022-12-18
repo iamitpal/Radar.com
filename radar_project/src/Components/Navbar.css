@@ -1,0 +1,8 @@
+* {
+  position: relative;
+}
+.navbar {
+  position: static;
+  top: 0;
+  color: black;
+}

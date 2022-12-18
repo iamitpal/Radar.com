@@ -51,7 +51,7 @@ export default function ThreeTierPricing() {
         <PriceWrapper>
           <Box py={4} px={12}>
             <Text fontWeight="500" fontSize="2xl">
-              Hobby
+              Starter
             </Text>
             <HStack justifyContent="center">
               <Text fontSize="3xl" fontWeight="600">
@@ -73,19 +73,23 @@ export default function ThreeTierPricing() {
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
+                Email automation
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
+                Form automation
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                Landing pages Optimization
+              </ListItem>
+              <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                Email and in-app chat support
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
+              <Button w="full" colorScheme="yellow" variant="outline">
                 Start trial
               </Button>
             </Box>
@@ -102,7 +106,7 @@ export default function ThreeTierPricing() {
             >
               <Text
                 textTransform="uppercase"
-                bg={useColorModeValue("red.300", "red.700")}
+                bg={useColorModeValue("#ffbc4b", "red.700")}
                 px={3}
                 py={1}
                 color={useColorModeValue("gray.900", "gray.300")}
@@ -115,7 +119,7 @@ export default function ThreeTierPricing() {
             </Box>
             <Box py={4} px={12}>
               <Text fontWeight="500" fontSize="2xl">
-                Growth
+                Professional
               </Text>
               <HStack justifyContent="center">
                 <Text fontSize="3xl" fontWeight="600">
@@ -137,27 +141,39 @@ export default function ThreeTierPricing() {
               <List spacing={3} textAlign="start" px={12}>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  unlimited build minutes
+                  Omni-channel marketing automation
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
+                  Multi-language content
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  Campaign management
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  A/B testing
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  Website traffic analytics
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Custom reporting
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Video hosting & management
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Social Media
                 </ListItem>
               </List>
               <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red">
+                <Button w="full" colorScheme="yellow">
                   Start trial
                 </Button>
               </Box>
@@ -167,7 +183,7 @@ export default function ThreeTierPricing() {
         <PriceWrapper>
           <Box py={4} px={12}>
             <Text fontWeight="500" fontSize="2xl">
-              Scale
+              Enterprise
             </Text>
             <HStack justifyContent="center">
               <Text fontSize="3xl" fontWeight="600">
@@ -189,19 +205,19 @@ export default function ThreeTierPricing() {
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
+                MANAGE YOUR TEAMS & BRANDS
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
+                EXTEND THE PLATFORM
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                ADVANCE YOUR REPORTING
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
+              <Button w="full" colorScheme="yellow" variant="outline">
                 Start trial
               </Button>
             </Box>

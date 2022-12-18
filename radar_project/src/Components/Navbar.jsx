@@ -46,7 +46,11 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={10}>
+      <Box
+        className="navbar"
+        bg={useColorModeValue("gray.100", "gray.900")}
+        px={10}
+      >
         <Flex
           h={"100px"}
           alignItems={"center"}
