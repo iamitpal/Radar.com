@@ -59,7 +59,7 @@ export default function Navbar() {
           <Box>
             <Image
               width={"6rem"}
-              src="https://i.ibb.co/drB1T5y/Radar-2.png"
+              src="https://i.ibb.co/mBb56Pm/Radar-5.png"
               alt="Logo"
             />
           </Box>
@@ -92,8 +92,8 @@ export default function Navbar() {
             <RouterLink to="/login">
               <Button>Login</Button>
             </RouterLink>
-            <RouterLink to="/register">
-              <Button>Register</Button>
+            <RouterLink to="/logout">
+              <Button>Logout</Button>
             </RouterLink>
             <Stack direction={"row"} spacing={7}>
               <Button onClick={toggleColorMode}>
