@@ -1,5 +1,6 @@
 <h1 align="center">
     Radar.Com
+    </h1>
 A CMS (Customer Management System) Platform that manage all your customers under the Radar.
     <img src="https://i.ibb.co/mBb56Pm/Radar-5.png" width="35" />
     <br/>
@@ -16,7 +17,7 @@ please use eve.holt@reqres.in for Login Purpose
   
   
   
-</h1>
+
 
 
 
