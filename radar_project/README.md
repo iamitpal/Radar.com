@@ -2,7 +2,7 @@
     Radar.Com
     </h1>
 A CMS (Customer Management System) Platform that manage all your customers under the Radar.
-    <img src="https://i.ibb.co/mBb56Pm/Radar-5.png" width="35" />
+    <img src="https://i.ibb.co/mBb56Pm/Radar-5.png" width="400" />
     <br/>
   Tech-stack Used:
 
